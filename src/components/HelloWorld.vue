@@ -80,6 +80,10 @@
     font-size: 1.1em;
     color: #1c4792;
 }
+
+li {
+  text-align:center;
+}
   </style>
 
 <script>

@@ -20,26 +20,31 @@
     </div>
   </div>
   <el-card class="box-card" style= "text-align=left">
-  <el-upload
-    class="upload-demo"
-    action=""
-    :on-preview="handlePreview"
-    :on-remove="handleRemove"
-    :before-remove="beforeRemove"
-    multiple
-    :on-success="handleSuccess"
-    :on-error="handleError"
-    :on-change="handelChange"
-    :limit="3"
-    :on-exceed="handleExceed"
-    :file-list="fileList"
-  >
-    <el-button size="small" type="primary">点击上传</el-button>
-    <!-- 用于指定上传文件下的文字说明 -->
-    <div slot="tip" class="el-upload__tip">
-      只能上传jpg/png文件，且不超过500kb
-    </div>
-  </el-upload>
+ <el-collapse v-model="activeNames" @change="handleChange">
+  <el-collapse-item title="课程Sum2301-1（暑期高中数学）" name="1">
+    <span>课程讲义</span><br>
+    <span>07.24 第1讲 高中数学介绍、初高中衔接、集合.pdf</span><br>
+    <span>07.26 第2讲 集合、逻辑用语、不等式、函数概念.pdf</span><br>
+    <span>07.28 第3讲 函数概念、指数、对数、幂函数.pdf</span><br>
+    <span>07.31 第4讲 基本初等函数.pdf</span><br>
+    <span>08.02 第5讲 三角函数.pdf</span><br>
+    <span>08.04 第6讲 三角函数、立体几何初步.pdf</span><br>
+    <span>08.07 第7讲 立体几何.pdf</span><br>
+    <span>其他资料</span><br>
+    <span>必修一 进度表.xlsx</span><br>
+    <el-divider></el-divider>
+    <sapn>百度网盘链接为：</sapn><a href="https://pan.baidu.com/s/1S6FIhg6dbV2_OFujNSbt_w">https://pan.baidu.com/s/1S6FIhg6dbV2_OFujNSbt_w</a><br>
+    <span>提取码：1234</span>
+  </el-collapse-item>
+  <el-collapse-item title="课程Sum2301-2（暑期高中数学）" name="2">
+    <sapn>百度网盘链接为：</sapn><a href="https://pan.baidu.com/s/1kGf6KSsOUMBxorllcItZZg">https://pan.baidu.com/s/1kGf6KSsOUMBxorllcItZZg </a><br>
+    <span>提取码：1234</span>
+  </el-collapse-item>
+  <el-collapse-item title="课程Sum2301-3（暑期高中数学）" name="3">
+    <sapn>百度网盘链接为：</sapn><a href="https://pan.baidu.com/s/1SVqAP1B88Ler3RWKddiiTw">https://pan.baidu.com/s/1SVqAP1B88Ler3RWKddiiTw </a><br>
+    <span>提取码：1234</span>
+  </el-collapse-item>
+</el-collapse>
   </el-card>
   <div class="title">
         <el-divider content-position="center">By lunwenZhou</el-divider>
@@ -76,5 +81,14 @@
     border-style: solid;
     border-radius: 2px;
     /* border-color:#a1cc8c; */
+}
+
+li {
+  text-align:center;
+}
+
+/deep/ .el-collapse-item__header{
+  font-weight: bold;
+  font-size: 16px;
 }
 </style>
