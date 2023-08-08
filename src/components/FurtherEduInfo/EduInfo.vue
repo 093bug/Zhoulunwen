@@ -19,7 +19,7 @@
     </div>
   </div>
 </div>
-<el-card class="box-card" style= "text-align=left">
+<el-card class="box-card">
 <el-upload
   class="upload-demo"
   action=""
